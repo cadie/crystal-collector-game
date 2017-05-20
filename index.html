@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystal Collector</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Crystal Collector</h1>
+      </div>
+      <div class="col-sm-4">
+        <!-- Button trigger instruction modal -->
+        <button type="button" class="btn pull-right" data-toggle="modal" data-target="#instructions">
+          Instructions
+        </button>
+      </div>
+    </div><!--/.row 1-->
+
+    <!-- Instructions Popup Modal -->
+    <div class="modal fade" id="instructions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Instructions</h4>
+          </div>
+          <div class="modal-body">
+            <p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystal cards. By clicking on a crystal card you will add a specific amount of points to your total score. You win the game by matching your total score to the random number displayed. If your total score goes above the random number, you lose.</p>
+            <p>The value of each crystal is hidden and can only be determined by determining how much each crystal is adding to you current score once you click on them.</p>
+            <p>Each time a new game starts, the random number will change and so will the values of the crystal cards.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div><!--/instructions popup modal-->
+
+    <div class="row">
+      <div class="white-border">
+        <div class="col-sm-4 match-box">
+            <p class="number" id="number-to-match">00</p>
+            <p class="side-text">the number<br> to match</p>
+        </div><!--/number to match (.match-box) container-->
+        <div class="col-sm-4 score-box">
+            <p class="number" id="current-score">0</p>
+            <p class="side-text">current <br>score</p>
+        </div><!--/.score-box-->
+        <div class="col-sm-4 wins-losses">
+          <p class="scores-p">Wins: <span id="wins">0</span><br>Losses: <span id="losses">0</span></p>
+        </div><!--/.wins-losses-->
+      </div>
+    </div><!--/.row 2 -->
+
+    <div class="row card-container">
+      <div class="col-sm-3">
+        <a href="#" id="crystal-1" class="hvr-bob"><img src="assets/images/crystal1.png" alt="Crystal 1" class="img-responsive"></a>
+      </div>
+      <div class="col-sm-3">
+        <a href="#" id="crystal-2" class="hvr-bob"><img src="assets/images/crystal2.png" alt="Crystal 2" class="img-responsive"></a>
+      </div>
+      <div class="col-sm-3">
+        <a href="#" id="crystal-3" class="hvr-bob"><img src="assets/images/crystal3.png" alt="Crystal 3" class="img-responsive"></a>
+      </div>
+      <div class="col-sm-3">
+        <a href="#" id="crystal-4" class="hvr-bob"><img src="assets/images/crystal4.png" alt="Crystal 4" class="img-responsive"></a>
+      </div>
+    </div><!--/.row 3-->
+  </div><!--/.container-->
+
+
+  <!-- Call jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Call game.js -->
+  <script src="assets/javascript/game.js"></script>
+</body>
+</html>

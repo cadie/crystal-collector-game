@@ -58,7 +58,9 @@ p.number {
     line-height: 22px;
     margin-bottom: 10px;
 }
-
+.logo-container {
+  overflow:hidden;
+}
 h1 {
   font-size: 50px;
   font-weight: bold;

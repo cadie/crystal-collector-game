@@ -1,37 +1,55 @@
-html, body {
-    background: url(../images/black-bg.png);
-    color: #d4d4d4;
-    font-size: 16px;
-    font-family: 'Oswald', sans-serif;
+html,
+body {
+  background: url(../images/black-bg.png);
+  color: #d4d4d4;
+  font-size: 16px;
+  font-family: 'Oswald', sans-serif;
+  animation: animatedBackground 100s linear infinite;
 }
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
 .row {
   padding: 25px 0 0 0;
 }
+
 .nopad {
-  padding:0;
+  padding: 0;
 }
-.rel-position{
+
+.rel-position {
   position: relative;
 }
 
 p.number {
-    font-size: 100px;
-    display: inline-block;
+  font-size: 100px;
+  display: inline-block;
 }
+
 .wins-losses {
   position: absolute;
   bottom: 10px;
   right: 0;
 }
+
 .score-box {
-    border-left: 1px solid rgba(212, 212, 212, .5);
-    border-right: 1px solid rgba(212, 212, 212, .5);
+  border-left: 1px solid rgba(212, 212, 212, .5);
+  border-right: 1px solid rgba(212, 212, 212, .5);
 }
+
 .scores-p {
   font-size: 40px;
   position: absolute;
   bottom: 0;
 }
+
 .white-border {
   display: block;
   box-sizing: border-box;
@@ -40,27 +58,36 @@ p.number {
   margin: 0 15px;
   position: relative;
 }
+
 .white-border>div {
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
+
 .side-text {
   display: inline-block;
   top: 0;
   font-size: 30px;
   padding-left: 10px;
 }
+
 .card-container {
-    margin-top: 10px;
+  margin-top: 10px;
 }
-.modal-title {color:#333;}
+
+.modal-title {
+  color: #333;
+}
+
 .modal-body p {
-    color: #333;
-    line-height: 22px;
-    margin-bottom: 10px;
+  color: #333;
+  line-height: 22px;
+  margin-bottom: 10px;
 }
+
 .logo-container {
-  overflow:hidden;
+  overflow: hidden;
 }
+
 h1 {
   font-size: 50px;
   font-weight: bold;
@@ -68,51 +95,58 @@ h1 {
   -webkit-text-fill-color: transparent;
 
 }
+
 h1:after {
-	content:"CRYSTAL COLLECTOR";
-	position:absolute;
-	left:15px;
-	top:0;
-	bottom:0;
-	width:99em;
-	background-image: -webkit-linear-gradient(left, #ff217c 0%, #634077 20%, #ff217c 40%, #634077 50%, #ff217c 70%, #634077 90%, #ff217c 100% );
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-animation: kaleidoscope 45s ease infinite;
+  content: "CRYSTAL COLLECTOR";
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 99em;
+  background-image: -webkit-linear-gradient(left, #ff217c 0%, #634077 20%, #ff217c 40%, #634077 50%, #ff217c 70%, #634077 90%, #ff217c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: kaleidoscope 45s ease infinite;
 }
- @-webkit-keyframes kaleidoscope {
- 0% {
- background-position: 0 0;
+
+@-webkit-keyframes kaleidoscope {
+  0% {
+    background-position: 0 0;
+  }
+  25% {
+    background-position: -25em 0;
+  }
+  50% {
+    background-position: -50em 0;
+  }
+  75% {
+    background-position: -75em 0;
+  }
+  100% {
+    background-position: -99em 0;
+  }
 }
- 25% {
- background-position: -25em 0;
-}
- 50% {
- background-position: -50em 0;
-}
- 75% {
- background-position: -75em 0;
-}
- 100% {
- background-position: -99em 0;
-}
-}
+
 button.btn {
-    background: #177282;
-    padding-bottom: 8px;
-    padding: 6px 25px 8px 25px;
-    font-size: 16px;
-    border: 0;
-    margin-top: 12px;
-    transition: all .3s ease-in-out;
+  background: #177282;
+  padding-bottom: 8px;
+  padding: 6px 25px 8px 25px;
+  font-size: 16px;
+  border: 0;
+  margin-top: 12px;
+  transition: all .3s ease-in-out;
 }
-.btn.focus, .btn:focus, .btn:hover {
-    color: #d4d4d4;
-    text-decoration: none;
-    background: #1a3541;
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+  color: #d4d4d4;
+  text-decoration: none;
+  background: #1a3541;
 }
 
 /*Card Animation*/
+
 @-webkit-keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
@@ -127,6 +161,7 @@ button.btn {
     transform: translateY(-8px);
   }
 }
+
 @keyframes hvr-bob {
   0% {
     -webkit-transform: translateY(-8px);
@@ -141,18 +176,21 @@ button.btn {
     transform: translateY(-8px);
   }
 }
+
 @-webkit-keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
+
 @keyframes hvr-bob-float {
   100% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
   }
 }
+
 .hvr-bob {
   display: inline-block;
   vertical-align: middle;
@@ -160,7 +198,10 @@ button.btn {
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
 }
-.hvr-bob:hover, .hvr-bob:focus, .hvr-bob:active {
+
+.hvr-bob:hover,
+.hvr-bob:focus,
+.hvr-bob:active {
   -webkit-animation-name: hvr-bob-float, hvr-bob;
   animation-name: hvr-bob-float, hvr-bob;
   -webkit-animation-duration: .3s, 1.5s;
